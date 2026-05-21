@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Puddle</title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background-color: #1f1f1f;
+            color: #d1d1d1;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #d1d1d1;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+
+        <!-- LEFT -->
+        <a class="navbar-brand" href="#">
+            Paddle
+        </a>
+
+        <!-- MOBILE BUTTON -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- RIGHT -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="navbar-nav">
+
+                <a class="nav-link px-3" href="#">
+                    New Item
+                </a>
+
+                <a class="nav-link px-3" href="#">
+                    Browse
+                </a>
+
+                <a class="nav-link px-3" href="#">
+                    Sign Up
+                </a>
+
+                <a class="btn btn-primary ms-3 px-4" href="#">
+                    Login
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container py-5">
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- LEFT -->
+            <div class="col-md-6">
+                <div class="footer-title">
+                    Marketplace
+                </div>
+
+                <p>
+                    Simple Django marketplace project with inventory management,
+                    API integration and AI features.
+                </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-md-3 offset-md-3">
+
+                <div class="footer-title">
+                    Menu
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#">
+                        About
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Use
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

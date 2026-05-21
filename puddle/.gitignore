@@ -8,4 +8,5 @@ staticfiles/
 venv/
 .vscode/
 .idea/
-*.iml
+.iml
+.xml
